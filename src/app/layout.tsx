@@ -1,6 +1,7 @@
 import { Header } from '@/components/Header'
 import './globals.css'
 import type { Metadata } from 'next'
+import { Footer } from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Artes Vidros W.R.R',
@@ -14,9 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='bg-sky-100'>
+      <body className='flex flex-col min-h-screen py-4 bg-sky-100'>
         <Header/>
-        {children}
+        <main className='flex-grow'>
+          {children}
+        </main>
+        <Footer/>
       </body>
     </html>
   )
