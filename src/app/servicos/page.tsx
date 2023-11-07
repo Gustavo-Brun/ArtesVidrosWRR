@@ -6,7 +6,7 @@ export default function HomeServicos() {
   return (
     <main>
       <Spacer h={'10'}/>
-      <Sash/>
+      <Sash text="Nossos Serviços"/>
       <Cards/>
     </main>
   )
