@@ -1,4 +1,4 @@
-import { Header } from '@/components/Header'
+import { NavBar } from '@/components/NavBar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Footer } from '@/components/Footer'
@@ -15,8 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='flex flex-col min-h-screen py-4 bg-sky-100'>
-        <Header/>
+      <body className='flex flex-col min-h-screen py-4 bg-gray-600'>
+        <NavBar/>
         <main className='flex-grow'>
           {children}
         </main>

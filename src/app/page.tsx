@@ -1,13 +1,11 @@
 import { Cards } from "@/components/Cards";
+import { Header } from "@/components/Header";
 import { Sash } from "@/components/Sash";
-import { Section1 } from "@/components/Section1";
-import { Spacer } from "@/components/Spacer";
 
 export default function Home() {
   return (
     <main>
-      <Spacer h={'10'}/>
-      <Section1/>
+      <Header/>
       <Sash text="Nossos Serviços"/>
       <Cards/>
     </main>

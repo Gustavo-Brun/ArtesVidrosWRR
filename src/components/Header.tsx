@@ -1,41 +1,34 @@
 import Image from "next/image"
 import Link from "next/link"
 
+
 export const Header = () => {
   return (
-    <header className="z-50 sticky top-2 flex mx-auto px-5 justify-between items-center h-20 w-5/6 backdrop-blur-sm bg-color-header-footer rounded-3xl shadow-md text-black text-lg font-mono font-bold">
+    <header className="h-screen bg-gray-600">
         <Image 
-        src={"/logo/Artes-Vidros-nBg.png"} 
-        alt="Logo Artes Vidros W.R.R"
-        width={100}
-        height={100}
+            src={'/img/header-img.png'} 
+            alt="Header Image" 
+            layout="fill"
+            objectFit="cover"
+            className="mix-blend-overlay"
         />
-        <nav>
-            <ul className=" grid gap-10 grid-cols-4 ">
-                <li className="hover:text-gray-600 transition-colors duration-300 hover:underline underline-offset-1">
-                    <Link href={"/"}>
-                        Início
-                    </Link>
-                </li>
-                <li className="hover:text-gray-600 transition-colors duration-300 hover:underline underline-offset-1">
-                    <Link href={"/servicos"}>
-                        Serviços
-                    </Link>
-                </li>
-                <li className="hover:text-gray-600 transition-colors duration-300 hover:underline underline-offset-1">
-                    <Link href={"/"}>
-                        Sobre Nós
-                    </Link>
-                </li>
-                <li className="hover:text-gray-600 transition-colors duration-300 hover:underline underline-offset-1">
-                    <Link href={"/"}>
-                        Fale Conosco
-                    </Link>
-                </li>
-            </ul>
-        </nav>
-        <div>
-            social midia
+        
+        <div className="border-8 border-white text-white">
+            <h2>TRANSFORME SEU ESPAÇO COM OS MELHORES SERVIÇOS DE VIDRAÇARIA!</h2>
+            <h1>Vidraçaria Artes Vidros W.R.R</h1>
+            <h2>Vidraçaria Profissional no Jardim Selma U+002d Zona Sul de São Paulo</h2>
+            <Link 
+            target="_blank" 
+            href={'https://wa.me/5511974276250/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Quero+Solicitar+um+Or%C3%A7amento+Gratuito.'}
+            >
+                {/* whatsapp icon */}
+                <p>
+                    Agende seu Orçamento Gratuito:
+                </p>
+                <p>
+                    (11) 97427-6250
+                </p>
+            </Link>
         </div>
     </header>
   )
