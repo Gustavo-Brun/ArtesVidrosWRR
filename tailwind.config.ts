@@ -11,8 +11,12 @@ const config: Config = {
       colors: {
         'color-primary': '#2e2deb',
         'color-secundary': '#00facd',
+        'color-logo': '#c2eafb',
         'color-sash': '#25272D',
         'color-header-footer': 'rgba(0, 0, 0, .1)'
+      },
+      fontFamily: {
+        'font-heebo': ['Heebo', 'sans-serif']
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
