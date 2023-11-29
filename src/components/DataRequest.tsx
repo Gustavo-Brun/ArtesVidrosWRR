@@ -1,25 +1,25 @@
 'use client'
-
-import { ChangeEvent, useState } from "react"
+import { Pdf } from './Pdf';
+import html2pdf from 'html2pdf.js';
+import { ChangeEvent, useState, useRef } from "react"
 
 export const DataRequest = () => {
  
     interface UserDataProps {
-        data: string;
+        
         cliente: string;
         contato: number | string;
-        serviço: string[]; 
-        valor: string[];
-        total: number;
+        serviços: { serviço: string; valor: string }[]; 
+        total:number | void;
+        observações: string;
       }
 
-    const [ userData, setUserData ] = useState<UserDataProps>({
-        data: new Date().toLocaleDateString('pt-BR'), 
+    const [ userData, setUserData ] = useState<UserDataProps>({ 
         cliente: ' ',
         contato: ' ', 
-        serviço: [], 
-        valor: [],
+        serviços: [], 
         total: 0,
+        observações: ' ',
     })
 
     const userDataHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -41,9 +41,8 @@ export const DataRequest = () => {
         if (novoServiço.trim() !== '' && (valorServiço.trim() !== '')) {
           setUserData((prevData) => ({
             ...prevData,
-            serviço: [...prevData.serviço, novoServiço],
-            valor: [...prevData.valor, valorServiço], /* preciso ver pq isso aqui tá retornando diferente no log 
-            depois tenta botar esses dois itens em um objeto só*/
+            serviços: [...prevData.serviços, { serviço: novoServiço, valor: valorServiço }],
+  
           }));
     
           serviçoInput.value = '';
@@ -53,25 +52,46 @@ export const DataRequest = () => {
         }
       };
  
+      const contentRef = useRef<HTMLDivElement>(null);
+
+      const generatePDF = () => {
+        const content = contentRef.current;
+
+        const options = {
+          filename: `Pedido ${userData.cliente}.pdf`,
+        };
+
+        if (content) {
+            html2pdf(content, options);
+        }
+    };
+
     return (
         <section>
-            <div className= {`grid grid-cols-1 gap-2 mx-auto my-14 p-5 border-2 border-black rounded-xl shadow-2xl bg-white w-2/4 `}>
+            <div className= {`grid grid-cols-1 gap-2 mx-auto my-14 p-5 border-2 border-black rounded-xl shadow-2xl bg-white w-2/4 text-xl `}>
                 
                 <label htmlFor="clienteInput">Cliente</label>
                 <input type="text" id="clienteInput" placeholder="Insira o nome do cliente." name="cliente" onChange={userDataHandler}/>
 
                 <label htmlFor="contatoInput">Contato</label>
-                <input type="text" id="contatoInput" placeholder="Telefone/Email." name="contato" onChange={userDataHandler}/>
+                <input type="tel" id="contatoInput" placeholder="Telefone." name="contato" onChange={userDataHandler}/>
 
                 <label htmlFor="serviçoInput">Serviço/Produto</label>
                 <input type="text" id="serviçoInput" placeholder="Ex: Vidro comum." name="serviço" />
 
                 <label htmlFor="valorInput">Valor</label>
-                <input type="text" id="valorInput" placeholder="R$00,00." name="valor" onChange={userDataHandler}/>
-                <button onClick={addService}>Adicionar Serviço/Produto</button>
-            
-                <button onClick={() => console.log(userData)}>Gerar Orçamento em PDF</button>
+                <input type="number" id="valorInput" placeholder="R$00,00." name="valor" onChange={userDataHandler}/>
+                <button className='flex mx-auto mb-10  rounded-3xl shadow-md text-white p-3 border-2 bg-black  font-bold' onClick={addService}>Adicionar Serviço/Produto</button>               
+
+                <label htmlFor="observaçõesInput">Observações</label>
+                <input type="text" id="observaçõesInput" placeholder="Insira observações caso necessário." name="observações" onChange={userDataHandler} />
+
             </div>
+
+            <div className= {`grid grid-cols-1 gap-2 mx-auto my-14 p-5 border-2 border-black rounded-xl shadow-2xl bg-white w-2/4 `}>
+              <Pdf userData={userData} generatePDF={generatePDF} contentRef={contentRef} />
+            </div>
+
         </section>
       );
     

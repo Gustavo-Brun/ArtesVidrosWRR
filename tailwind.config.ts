@@ -23,6 +23,10 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      width: {
+        '20vw': '20vw',
+        '45vw': '45vw',
+      }
     },
   },
   plugins: [],
