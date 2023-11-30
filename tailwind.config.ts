@@ -13,7 +13,8 @@ const config: Config = {
         'color-secundary': '#00facd',
         'color-logo': '#c2eafb',
         'color-sash': '#25272D',
-        'color-header-footer': 'rgba(0, 0, 0, .1)'
+        'color-header-footer': 'rgba(0, 0, 0, .1)',
+        'color-section1': '#303031'
       },
       fontFamily: {
         'font-heebo': ['Heebo', 'sans-serif']

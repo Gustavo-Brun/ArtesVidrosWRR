@@ -80,7 +80,7 @@ export const Pdf: React.FC<PdfProps> = ({ userData, generatePDF, contentRef }) =
 
           <aside className='flex flex-col items-end m-4 font-medium'>
             <p>Total de Serviços/Produtos <span>{userData.serviços.length}</span></p>
-            <p>Valor Total: <span>{userData.total}</span> </p>
+            <p>Valor Total: R$<span>{userData.total}</span>,00 </p>
           </aside>
         </section>
 
