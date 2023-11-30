@@ -9,8 +9,8 @@ export const DataRequest = () => {
         
         cliente: string;
         contato: number | string;
-        serviços: { serviço: string; valor: string }[]; 
-        total:number | void;
+        serviços: { serviço: string; valor: number }[]; 
+        total:number ;
         observações: string;
       }
 
@@ -36,14 +36,18 @@ export const DataRequest = () => {
         const novoServiço = serviçoInput.value;
 
         const valorInput = document.getElementById('valorInput') as HTMLInputElement
-        const valorServiço = valorInput.value;
+        const valorServiço = parseFloat(valorInput.value);
     
-        if (novoServiço.trim() !== '' && (valorServiço.trim() !== '')) {
-          setUserData((prevData) => ({
-            ...prevData,
-            serviços: [...prevData.serviços, { serviço: novoServiço, valor: valorServiço }],
-  
-          }));
+        if (novoServiço.trim() !== '' && valorServiço !== 0) {
+          setUserData((prevData) => {
+            const novoTotal = prevData.total + (valorServiço);
+    
+            return {
+              ...prevData,
+              serviços: [...prevData.serviços, { serviço: novoServiço, valor: valorServiço }],
+              total: novoTotal,
+            };
+          });
     
           serviçoInput.value = '';
           valorInput.value = '';

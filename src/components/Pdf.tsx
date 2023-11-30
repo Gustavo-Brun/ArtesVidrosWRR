@@ -6,8 +6,8 @@ interface PdfProps {
   userData: {
     cliente: string;
         contato: number | string;
-        serviços: { serviço: string; valor: string }[]; 
-        total:number | void;
+        serviços: { serviço: string; valor: number }[]; 
+        total:number ;
         observações: string;
   };
   generatePDF: () => void;
@@ -19,7 +19,7 @@ export const Pdf: React.FC<PdfProps> = ({ userData, generatePDF, contentRef }) =
   const primeiroNome = (nome:string) => {
     return (nome.split(" ")[0] || null);
   }
-  
+
 
   return (
     <main>
@@ -30,7 +30,7 @@ export const Pdf: React.FC<PdfProps> = ({ userData, generatePDF, contentRef }) =
 
         <section className='my-8'>
           <h1 className='text-6xl font-bold mb-4'>Pedido - {primeiroNome(userData.cliente)}</h1>
-          <p className='text-lg underline underline-offset-4'>Emissão: <span>{new Date().toLocaleDateString('pt-BR')}</span></p>
+          <p className='text-lg text italic'>Emissão: <span>{new Date().toLocaleDateString('pt-BR')}</span></p>
         </section>
 
         <section className='grid grid-cols-2 gap-6 my-5'>
@@ -80,7 +80,7 @@ export const Pdf: React.FC<PdfProps> = ({ userData, generatePDF, contentRef }) =
 
           <aside className='flex flex-col items-end m-4 font-medium'>
             <p>Total de Serviços/Produtos <span>{userData.serviços.length}</span></p>
-            <p>Valor Total: </p>
+            <p>Valor Total: <span>{userData.total}</span> </p>
           </aside>
         </section>
 
