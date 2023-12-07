@@ -9,7 +9,11 @@ export default function HomeServicoId({ params }: { params: { servicoId: string 
     const servico = servicesData.find((s) => s.url === params.servicoId);
 
     if (!servico) {
-        return <p>Serviço não encontrado</p>;
+        return (
+        <div className={"text-3xl font-medium mx-auto text-center mt-20 p-6 border-2 border-black rounded-xl shadow-2xl bg-white w-2/4"}>
+            Serviço não encontrado
+        </div>
+        )
       }
 
     const [ imageIndex, setImageIndex ] = useState(0)
@@ -32,7 +36,7 @@ export default function HomeServicoId({ params }: { params: { servicoId: string 
     
     return (
         
-        <main className= {`grid grid-cols-1 gap-2 mx-auto my-3 p-6 border-2 border-black rounded-xl shadow-2xl bg-white w-2/4 `}>
+        <main className= {"grid grid-cols-1 gap-2 mx-auto my-3 p-6 border-2 border-black rounded-xl shadow-2xl bg-white w-2/4"}>
             
             <h2 className="my-2 text-4xl font-bold text-center"> {servico.title} </h2>
 
