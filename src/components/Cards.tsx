@@ -12,7 +12,7 @@ export const Cards = () => {
         
         return (
 
-            <Link  key= {url} href={url}  className= {` grid justify-items-center m-5 my-10 p-5 border-b-4 ${borderColor} rounded-xl shadow-2xl bg-white	 cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110`} >
+            <Link  key= {url} href={`/servicos/${url}`}  className= {` grid justify-items-center m-5 my-10 p-5 border-b-4 ${borderColor} rounded-xl shadow-2xl bg-white	 cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110`} >
                 
                 <div className="my-2"> 
                     <img className="w-28 "

@@ -94,11 +94,6 @@ export const Pdf: React.FC<PdfProps> = ({ userData, generatePDF, contentRef }) =
             2 - Pagamento do valor de Sinal (50%). Pagamento do valor restante após a conclusão do
             serviço.
           </p>
-          <br />
-          <p>Dados para Pagamento:</p>
-          <p>Pix: CPF 188.641.838-17</p>
-          <p>Carlos Rodrigues de Oliveira</p>
-          <br />
         </section>
 
       </section>
