@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { FaWhatsapp } from "react-icons/fa";
 
 
 export const Header = () => {
@@ -24,13 +25,21 @@ export const Header = () => {
             href={'https://wa.me/5511974276250/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Quero+Solicitar+um+Or%C3%A7amento+Gratuito.'}
             className="before:border-t-2 before:block before:mb-10 before:border-gray-500"
             >
-                {/* whatsapp icon */}
-                <p className="text-lg my-2">
-                    Agende seu Orçamento Gratuito:
-                </p>
-                <p className="text-4xl">
-                    (11) 97427-6250
-                </p>
+                <div className="flex text-center items-center">
+                    <FaWhatsapp 
+                    style={{ background: 'linear-gradient(45deg, #25D366, #128C7E)' , borderRadius: '50%', fontSize: '70px' , padding: '10px' }} 
+                    />
+
+                    <div className="ml-5">
+                        <p className="text-lg my-2">
+                            Agende seu Orçamento Gratuito:
+                        </p>
+                        <p className="text-4xl">
+                            (11) 97427-6250
+                        </p>
+                    </div>
+                </div>
+                
             </Link>
         </div>
     </header>

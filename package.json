@@ -10,9 +10,10 @@
   },
   "dependencies": {
     "html2pdf.js": "^0.10.1",
-    "next": "latest",
+    "next": "^14.0.3",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-icons": "^4.12.0"
   },
   "devDependencies": {
     "@types/node": "latest",

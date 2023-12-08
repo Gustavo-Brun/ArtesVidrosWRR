@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { FaInstagram } from "react-icons/fa";
 
 export const NavBar = () => {
   return (
@@ -34,8 +35,13 @@ export const NavBar = () => {
                 </li>
             </ul>
         </nav>
-        <div>
-            social midia
+        <div className="items-center flex"> 
+            <Link 
+            href={'https://www.instagram.com/artesvidroswrr/'} 
+            target="blank"
+            className="mr-5 ">
+                <FaInstagram style={{ color: 'white' , fontSize: '30px' , background:'linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45)' , borderRadius: '30%' , padding: '2px' }}/>
+            </Link>
         </div>
     </section>
   )
