@@ -12,7 +12,7 @@ const config: Config = {
         'color-primary': '#2e2deb',
         'color-secundary': '#00facd',
         'color-logo': '#c2eafb',
-        'color-sash': '#25272D',
+        'color-gray': '#25272D',
         'color-header-footer': 'rgba(0, 0, 0, .1)',
         'color-section1': '#303031'
       },

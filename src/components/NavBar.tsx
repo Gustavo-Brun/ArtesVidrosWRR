@@ -29,7 +29,7 @@ export const NavBar = () => {
                     </Link>
                 </li>
                 <li className="hover:text-color-logo transition-colors duration-300 hover:underline underline-offset-1">
-                    <Link href={"/"}>
+                    <Link href={"/contato"}>
                         Fale Conosco
                     </Link>
                 </li>
