@@ -67,7 +67,7 @@ export const Carousel = () => {
             <Link 
             target="_blank" 
             href={"/servicos"} 
-            className='flex w-fit mx-auto mt-10 text-2xl rounded-3xl shadow-md text-white p-3  bg-black font-mono font-bold'>Ver mais</Link>
+            className='flex w-fit mx-auto mt-10 text-2xl shadow-md text-white p-3  bg-black font-mono font-bold transition-transform duration-300 ease-in-out transform hover:scale-110 hover:text-red-600'>Ver mais</Link>
             
              </section> 
 
