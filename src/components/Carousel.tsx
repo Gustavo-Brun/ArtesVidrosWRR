@@ -30,7 +30,7 @@ export const Carousel = () => {
 
     return (
         
-        <section className= "my-3 p-6 py-10 shadow-2xl bg-white -mt-24 ">
+        <section className= "p-6 py-10 shadow-2xl bg-white  ">
             
             <div className="mt-4 mb-14">
                 <Sash text="Conheça nosso Trabalho"/>
@@ -48,9 +48,10 @@ export const Carousel = () => {
                         }}
                     />
 
-                <img className="h-[500px] mx-auto my-5 rounded "
+                <img className="h-[500px] mx-auto my-5 rounded"
                     src= {carouselData[imageIndex]}
-                    alt= {`Imagem número ${imageIndex +1} do Carrosel de Imagens.`} />
+                    alt= {`Imagem número ${imageIndex +1} do Carrosel de Imagens.`} 
+                />
 
                 <FaArrowCircleRight onClick={nextImage} 
                     style={{ 
