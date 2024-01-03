@@ -3,6 +3,7 @@ import Link from "next/link"
 import { FaInstagram } from "react-icons/fa";
 
 export const NavBar = () => {
+    
   return (
     <section className="z-50 sticky top-2 flex mx-auto px-5 justify-between items-center h-20 w-5/6 backdrop-blur-sm bg-color-header-footer rounded-3xl shadow-md text-white text-lg font-mono font-bold">
         <Image 
@@ -14,7 +15,7 @@ export const NavBar = () => {
         <nav>
             <ul className=" grid gap-10 grid-cols-4 ">
                 <li className="hover:text-color-logo transition-colors duration-300 hover:underline underline-offset-1">
-                    <Link href={"/"}>
+                    <Link href={"/#inicio"}>
                         Início
                     </Link>
                 </li>
@@ -24,12 +25,12 @@ export const NavBar = () => {
                     </Link>
                 </li>
                 <li className="hover:text-color-logo transition-colors duration-300 hover:underline underline-offset-1">
-                    <Link href={"/"}>
+                    <Link href={"/#sobre"}>
                         Sobre Nós
                     </Link>
                 </li>
                 <li className="hover:text-color-logo transition-colors duration-300 hover:underline underline-offset-1">
-                    <Link href={"/contato"}>
+                    <Link href={"/#contato"}>
                         Fale Conosco
                     </Link>
                 </li>

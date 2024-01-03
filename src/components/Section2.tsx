@@ -7,7 +7,7 @@ export function Section2() {
   return (
 
 
-    <section className=" relative p-20 my-10 text-white">
+    <section id="sobre" className="relative p-20  text-white">
 
         <Image 
             src={'/img/d19.jpeg'} 
@@ -17,7 +17,7 @@ export function Section2() {
             className="mix-blend-overlay"
         />
 
-        <div className="h-full content-center">
+        <div>
 
             <h2 className="text-center mb-10 text-6xl font-semibold">Por que Artes Vidros?</h2>
 

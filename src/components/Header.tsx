@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export const Header = () => {
   return (
-    <header className="h-screen bg-gray-600 flex pt-14 pl-20">
+    <header id="inicio" className="h-screen bg-gray-600 flex pt-14 pl-20">
         <Image 
             src={'/img/header-img.png'} 
             alt="Header Image" 

@@ -2,7 +2,7 @@ import { Form } from "./Form"
 
 export const Contact = () => {
   return (
-    <section className=" m-10 flex w-4/5 mx-auto py-10 ">
+    <section id="contato" className=" m-10 flex w-4/5 mx-auto py-10 ">
         <aside className="w-1/2 bg-color-gray text-white p-5 rounded-l-3xl space-y-4">
             <h2 className="text-4xl font-bold after:border-t-2 after:block after:mt-4 after:w-1/12 after:m after:border-red-600"> Estamos ansiosos para conhecer você </h2>
             <h3 className="text-2xl font-semibold"> Em caso de dúvidas, não hesite em nos contatar! </h3>
