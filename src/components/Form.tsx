@@ -13,7 +13,7 @@ export const Form = () => {
     const { register , handleSubmit, formState: { errors } } = useForm<FormProps>()
 
     const onSubmit =  (data:FormProps) => {
-        
+        //Enviar para banco de dados
     }
 
     return (
