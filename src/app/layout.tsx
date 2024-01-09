@@ -1,4 +1,5 @@
 import { NavBar } from '@/components/NavBar'
+import { NavBarMobile } from '@/components/NavBarMobile'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Footer } from '@/components/Footer'
@@ -16,7 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='scroll-smooth scroll-p-4'>
-      <body className='flex flex-col min-h-screen py-4 bg-gray-600'>
+      <body className='min-h-screen py-4 bg-gray-600'>
+        <NavBarMobile/>
         <NavBar/>
         <main>
           {children}
