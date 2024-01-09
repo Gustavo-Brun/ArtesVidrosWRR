@@ -36,7 +36,7 @@ export const NavBarMobile = () => {
   return (
     <section 
     onClick={setNav}
-    className="md:hidden flex-col items-center z-50 fixed right-2 top-2  w-fit backdrop-blur-sm bg-color-header-footer rounded-3xl shadow-md text-black text-xl font-mono font-bold hover:cursor-pointer">
+    className="md:hidden flex-col items-center z-50 fixed right-2 top-2 w-fit py-2 backdrop-blur-sm bg-color-header-footer rounded-3xl shadow-md text-black text-xl font-mono font-bold hover:cursor-pointer">
         <div className="flex items-center">
             <div className="ml-2 animate-pulse ">
                 <IoIosArrowDown style={{display:navArrowDown, fontSize:"1.5em"}}/>
