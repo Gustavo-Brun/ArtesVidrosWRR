@@ -4,6 +4,6 @@ type SpacerProps = {
 
 export function Spacer({style}:SpacerProps) {
   return (
-    <div className={`${style}`}>.</div>
+    <div className={`${style}`}></div>
   )
 }

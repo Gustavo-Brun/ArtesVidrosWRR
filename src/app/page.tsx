@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { HeaderMobile } from "@/components/HeaderMobile";
 import { Sash } from "@/components/Sash";
 import { Section1 } from "@/components/Section1";
+import { Section1Mobile } from "@/components/Section1Mobile";
 import { Section2 } from "@/components/Section2";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Header/>
       <HeaderMobile/>
       <Section1/>
+      <Section1Mobile/>
       <Sash text="Nossos Serviços"/>
       <Cards/>
       <Section2/>
