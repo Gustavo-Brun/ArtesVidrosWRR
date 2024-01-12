@@ -7,6 +7,7 @@ import { Sash } from "@/components/Sash";
 import { Section1 } from "@/components/Section1";
 import { Section1Mobile } from "@/components/Section1Mobile";
 import { Section2 } from "@/components/Section2";
+import { Section2Mobile } from "@/components/Section2Mobile";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Sash text="Nossos Serviços"/>
       <Cards/>
       <Section2/>
+      <Section2Mobile/>
       <Carousel/>
       <Contact/>
     </main>
