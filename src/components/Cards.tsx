@@ -13,7 +13,7 @@ export const Cards = () => {
           
           return (
 
-              <Link  key= {url} href={`/servicos/${url}`}  className= {` grid justify-items-center m-5 my-10 p-5 border-b-4 ${borderColor} rounded-xl shadow-2xl bg-white	 cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110`} >
+              <Link  key= {url} href={`/servicos/${url}`}  className= {` grid justify-items-center m-5 my-10 p-5 border-b-4 ${borderColor} rounded-xl shadow-2xl bg-white	 cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110 active:scale-90`} >
                   
                   <div className="my-2"> 
                       <img className="w-28 "
@@ -43,7 +43,7 @@ export const Cards = () => {
           <p className="my-4  text-xl   hover:text-gray-600 transition-colors duration-300"> Não se preocupe. Criamos um serviço personalizado para você! </p>
 
           <Link href={'https://wa.me/5511974276250/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Gostaria+de+Solicitar+um+Or%C3%A7amento+Gratuito.'} 
-          className="my-5 bg-gradient-to-r from-color-primary  to-color-secundary hover:from-color-secundary  hover:to-color-primary text-white font-bold py-2 px-6 rounded-full shadow-md transition-transform duration-300 ease-in-out transform hover:scale-110">
+          className="my-5 bg-gradient-to-r from-color-primary  to-color-secundary hover:from-color-secundary  hover:to-color-primary text-black font-bold py-2 px-6 rounded-full shadow-md transition-transform duration-300 ease-in-out transform hover:scale-110 active:text-red-600 animate-pulse ">
             Solicitar Projeto Personalizado
           </Link>
               
