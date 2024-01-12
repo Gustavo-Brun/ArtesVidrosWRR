@@ -1,9 +1,9 @@
 type SpacerProps = {
-    h: number | string,
+    style: number | string,
   };
 
-export function Spacer({h}:SpacerProps) {
+export function Spacer({style}:SpacerProps) {
   return (
-    <div className={`h-${h} invisible`}>.</div>
+    <div className={`${style}`}>.</div>
   )
 }
