@@ -16,14 +16,31 @@ export const NavBarMobile = () => {
             const navBar = document.getElementById("navBar");
 
             if (navBar) {
-                if (scrollY > 100) {
-                  navBar.style.position = "fixed";
-                  navBar.style.right = "8px";
-                  navBar.style.top = "8px";
-                } else {
-                  navBar.style.position = "absolute";
-                  navBar.style.right = "40%";
-                  navBar.style.top = "20px";
+                switch (true) {
+
+                    case scrollY === 0:
+                    navBar.style.position = "absolute";
+                    navBar.style.right = "40%";
+                    navBar.style.top = "20px";
+                    navBar.style.color = "black";
+                    break;
+
+                case scrollY > 100:
+                    navBar.style.position = "fixed";
+                    navBar.style.right = "8px";
+                    navBar.style.top = "8px";
+
+                    if (scrollY < 800) {
+                        navBar.style.color = "black"
+                    } else if (scrollY > 700 && scrollY < 1200) {
+                        navBar.style.color = "white";
+                    } else if (scrollY > 1200 && scrollY < 5600) {
+                        navBar.style.color = "black";
+                    } else if (scrollY > 5600 && scrollY < 7000) {
+                        navBar.style.color = "white";
+                    } else if (scrollY > 7000)
+                        navBar.style.color = "black";
+                    break;
                 }
               }
         };
