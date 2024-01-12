@@ -45,7 +45,7 @@ export const Form = () => {
                     {errors?.msg?.type === 'required' && <p className="text-sm text-red-700">Escreva uma mensagem!</p>}
                 </div>
 
-                <button onClick={() => handleSubmit(onSubmit)()} className="mx-auto my-4 rounded-2xl shadow-md text-white p-3 px-8 border-2 bg-black  font-bold">Enviar</button>
+                <button onClick={() => handleSubmit(onSubmit)()} className="mx-auto my-4 rounded-2xl shadow-md text-white p-3 px-8 border-2 bg-black  font-bold active:text-red-600 active:scale-95">Enviar</button>
                 
             </div>
         </section>

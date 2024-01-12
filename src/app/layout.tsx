@@ -18,8 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en" className='scroll-smooth scroll-p-4'>
       <body className='min-h-screen py-4 bg-gray-600'>
-        <NavBarMobile/>
         <NavBar/>
+        <NavBarMobile/>
         <main>
           {children}
         </main>

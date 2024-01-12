@@ -5,7 +5,7 @@ import { Spacer } from "@/components/Spacer";
 export default function HomeServicos() {
   return (
     <main>
-      <Spacer h={'10'}/>
+      <Spacer style={'h-10 invisible'}/>
       <Sash text="Nossos Serviços"/>
       <Cards/>
     </main>
