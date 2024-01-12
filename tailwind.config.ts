@@ -27,6 +27,9 @@ const config: Config = {
       width: {
         '20vw': '20vw',
         '45vw': '45vw',
+      },
+      height: {
+        'headerMobile-height-calc' : 'calc(100% + 16px)'
       }
     },
   },

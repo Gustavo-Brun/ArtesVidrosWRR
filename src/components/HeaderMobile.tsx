@@ -6,7 +6,7 @@ export const HeaderMobile = () => {
   return (
     <header id="inicio" className="md:hidden flex bg-[url('/img/header-img-mobile.jpeg')] bg-bottom bg-cover bg-no-repeat -mt-4 h-screen pt-40">
     
-        <div className="bg-gray-600 h-full w-full absolute top-0 left-0 mix-blend-overlay"></div>
+        <div className="bg-gray-600 h-headerMobile-height-calc w-full absolute top-0 left-0 mix-blend-overlay"></div>
 
         <div className="text-white text-center space-y-8 font-font-heebo z-10 ">
             <h2 className="tracking-widest ">TRANSFORME SEU ESPAÇO COM OS MELHORES SERVIÇOS DE VIDRAÇARIA!</h2>
