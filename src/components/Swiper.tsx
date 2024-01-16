@@ -45,7 +45,7 @@ export const SwiperCarousel = () => {
                             src= {image} 
                             alt= {'Slider Image.'} 
                             height={300}
-                            width={400}
+                            width={300}
                             objectFit="cover"
                             className='mx-auto'
                         />
