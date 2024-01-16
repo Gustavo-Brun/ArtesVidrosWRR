@@ -17,6 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='scroll-smooth scroll-p-4'>
+      <head>
+        <link rel="icon" href="/logo/logopic.png" sizes="any" />
+      </head>
       <body className='min-h-screen py-4 bg-gray-600'>
         <NavBar/>
         <NavBarMobile/>
