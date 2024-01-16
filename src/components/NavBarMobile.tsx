@@ -13,7 +13,7 @@ export const NavBarMobile = () => {
         const handleScroll = () => {
             // Lógica para estilos durante o scroll
             const scrollY = window.scrollY;
-            const navBar = document.getElementById("navBar");
+            const navBar = document.getElementById("navBarMobile");
 
             if (navBar) {
                 switch (true) {
@@ -81,7 +81,7 @@ export const NavBarMobile = () => {
 
   return (
     <section 
-    id="navBar"
+    id="navBarMobile"
     onClick={setNav}
     className="md:hidden flex-col items-center z-50 absolute right-[40%] top-5  w-fit py-2 backdrop-blur-sm bg-color-header-footer rounded-3xl shadow-md text-black text-xl font-mono font-bold hover:cursor-pointer">
         <div className="flex items-center">
