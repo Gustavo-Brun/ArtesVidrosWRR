@@ -3,6 +3,7 @@ import { NavBarMobile } from '@/components/NavBarMobile'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Footer } from '@/components/Footer'
+import { FooterMobile } from '@/components/FooterMobile'
 import { Whatsapp } from '@/components/Whatsapp'
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({
         </main>
         <Whatsapp/>
         <Footer/>
+        <FooterMobile/>
       </body>
     </html>
   )
