@@ -6,7 +6,7 @@ export const Cards = () => {
 //Componente Principal - Rodando map e Rendenizando Cards 
   return (
     <section>
-      <section className="m-auto w-9/12 md:grid md:grid-cols-3 ">
+      <section className="m-auto w-9/12 lg:grid lg:grid-cols-3 text-center">
           {servicesData.map(({ image, title, url }, index) =>  {
 
           const borderColor = index % 2 === 0 ? 'border-color-primary' : 'border-color-secundary';

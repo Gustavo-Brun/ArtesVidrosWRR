@@ -14,7 +14,7 @@ export const Header = () => {
             className="mix-blend-overlay"
         />
         
-        <div className=" text-white h-fit w-2/5 grid grid-cols-1 gap-10 font-font-heebo z-10 ">
+        <div className=" text-white h-fit xl:w-2/5 grid grid-cols-1 gap-10 font-font-heebo z-10 ">
             <h2 className="tracking-widest">TRANSFORME SEU ESPAÇO COM OS MELHORES SERVIÇOS DE VIDRAÇARIA!</h2>
             <div>
                 <h1 className="text-6xl mb-4">Vidraçaria Artes Vidros W.R.R</h1>

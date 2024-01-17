@@ -22,7 +22,7 @@ export const SwiperCarousel = () => {
 
   return (
 
-    <section className= "p-6 py-10 shadow-2xl bg-white  ">
+    <section className= "p-6 py-10 shadow-2xl bg-white overflow-hidden ">
 
         <div className="mt-4 mb-14">
                 <Sash text="Conheça nosso Trabalho"/>

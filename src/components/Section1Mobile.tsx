@@ -35,7 +35,7 @@ export function Section1Mobile() {
       };
 
   return (
-    <section className="md:hidden flex flex-col mb-10 p-8 items-center bg-white ">
+    <section className="lg:hidden md:-mt-24 flex flex-col mb-10 p-8 items-center bg-white ">
 
         <div className='flex flex-col space-y-12 mb-10 '>
             <h2 className="font-bold text-3xl">

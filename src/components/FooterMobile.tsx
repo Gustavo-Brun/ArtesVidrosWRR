@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa"
 export const FooterMobile = () => {
     return (
 
-        <footer className="hidden md:grid grid-cols-3 w-[90%] mx-auto items-center p-2 bg-color-header-footer rounded-3xl shadow-md font-mono font-semibold text-white">
+        <footer className="hidden lg:grid grid-cols-3 w-[90%] mx-auto items-center p-2 bg-color-header-footer rounded-3xl shadow-md font-mono font-semibold text-white">
 
             <section className="ml-10 w-fit">
                 <Link href="tel:+5511980977240" className="space-y-2 active:text-green-600">
