@@ -22,7 +22,7 @@ export const Pdf: React.FC<PdfProps> = ({ userData, generatePDF, contentRef }) =
 
 
   return (
-    <main>
+    <section>
 
       <section ref={contentRef} className='relative m-10 text-base'>
 
@@ -101,6 +101,6 @@ export const Pdf: React.FC<PdfProps> = ({ userData, generatePDF, contentRef }) =
       <br />
 
       <button className='flex mx-auto mb-10 text-2xl rounded-3xl shadow-md text-white p-3 border-2 bg-black font-mono font-bold' onClick={generatePDF}>Gerar Orçamento em PDF</button>
-    </main>
+    </section>
   );
 };
