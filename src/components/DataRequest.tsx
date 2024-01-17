@@ -1,6 +1,5 @@
 'use client'
-import { Pdf } from './Pdf';
-import html2pdf from 'html2pdf.js';
+import { Pdf } from './GeneratePDF';
 import { ChangeEvent, useState, useRef } from "react"
 
 export const DataRequest = () => {
@@ -58,14 +57,16 @@ export const DataRequest = () => {
  
       const contentRef = useRef<HTMLDivElement>(null);
 
-      const generatePDF = () => {
+      const generatePDF = async () => {
         const content = contentRef.current;
 
-        const options = {
-          filename: `Pedido ${userData.cliente}.pdf`,
-        };
-
         if (content) {
+            // Importação html2pdf apenas no lado do cliente
+            const html2pdf = (await import('html2pdf.js')).default;
+            const options = {
+                filename: `Pedido ${userData.cliente}.pdf`,
+            };
+
             html2pdf(content, options);
         }
     };
