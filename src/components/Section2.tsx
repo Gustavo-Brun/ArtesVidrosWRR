@@ -12,8 +12,8 @@ export function Section2() {
         <Image 
             src={'/img/d19.jpeg'} 
             alt="Section2 Image" 
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             className="mix-blend-overlay"
         />
 

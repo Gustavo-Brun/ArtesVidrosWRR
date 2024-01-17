@@ -9,8 +9,8 @@ export const Header = () => {
         <Image 
             src={'/img/header-img.png'} 
             alt="Header Image" 
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             className="mix-blend-overlay"
         />
         
