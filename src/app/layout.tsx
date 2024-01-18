@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { NavBar } from '@/components/NavBar'
 import { NavBarMobile } from '@/components/NavBarMobile'
 import './globals.css'
@@ -30,6 +31,7 @@ export default function RootLayout({
         <Whatsapp/>
         <Footer/>
         <FooterMobile/>
+        <SpeedInsights />
       </body>
     </html>
   )
