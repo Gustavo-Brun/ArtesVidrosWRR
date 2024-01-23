@@ -52,7 +52,7 @@ export function Section1Mobile() {
             </Link>
         </div>
 
-        <div className='bg-color-section1 text-white h-full w-[96.7vw] p-12 grid gap-12 justify-items-center items-center '>
+        <div className='bg-color-section1 text-white h-full p-12 grid gap-12 justify-items-center items-center '>
             <p className="font-bold ">
                 DEIXE OS NÚMEROS FALAREM
             </p>
