@@ -52,22 +52,22 @@ export function Section1Mobile() {
             </Link>
         </div>
 
-        <div className='bg-color-section1 text-white h-full p-12 grid gap-12 justify-items-center items-center '>
+        <div className='bg-color-section1 text-white h-full p-10 w-[90vw] grid gap-12 justify-items-center items-center '>
             <p className="font-bold ">
                 DEIXE OS NÚMEROS FALAREM
             </p>
             <div className='flex'>
                 <div className='mr-14 text-center'>
-                    <span className='text-5xl font-bold'>{NumberAnimation(26, 100)}+</span>
+                    <span className='sm:text-5xl text-3xl font-bold'>{NumberAnimation(26, 100)}+</span>
                     <p>Anos de Experiência</p>
                 </div>
                 <div className='text-center'>
-                    <p className='text-5xl font-bold'>Diversos </p>
+                    <p className='sm:text-5xl text-3xl font-bold'>Diversos </p>
                     <p>Projetos Concluídos</p>
                 </div>
             </div>
             <div className='text-center'>
-                <span className='text-5xl font-bold'>{NumberAnimation(100, 50)}%</span>
+                <span className='sm:text-5xl text-3xl font-bold'>{NumberAnimation(100, 50)}%</span>
                 <p>Clientes Satisfeitos</p>
             </div>
         </div>

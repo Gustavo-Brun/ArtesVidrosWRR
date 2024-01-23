@@ -29,7 +29,7 @@ const config: Config = {
         '45vw': '45vw',
       },
       height: {
-        'headerMobile-height-calc': 'calc(100% + 48px)',
+        'headerMobile-height-calc': 'calc(100% + 50px)',
         'error-height-calc': 'calc(100vh - 105px)'
       }
     },
