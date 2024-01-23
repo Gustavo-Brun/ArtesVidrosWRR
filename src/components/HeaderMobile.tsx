@@ -8,7 +8,7 @@ export const HeaderMobile = () => {
     
         <div className="bg-gray-600 h-headerMobile-height-calc w-full absolute top-0 left-0 mix-blend-overlay"></div>
 
-        <div className="text-white text-center space-y-8 font-font-heebo z-10 place-content-between flex flex-col pb-6">
+        <div className="text-white text-center space-y-8 font-font-heebo z-10 place-content-between flex flex-col">
             <h2 className="tracking-widest ">TRANSFORME SEU ESPAÇO COM OS MELHORES SERVIÇOS DE VIDRAÇARIA!</h2>
             <div>
                 <h1 className="text-6xl mb-4">Vidraçaria Artes Vidros W.R.R</h1>
@@ -17,7 +17,7 @@ export const HeaderMobile = () => {
             <div 
             className="before:border-t-2 before:block before:mb-10 before:mx-10 before:border-gray-500"
             >
-                <div className="flex text-center items-center justify-between px-2 ">
+                <div className="flex text-center items-center justify-between px-2 pb-8">
                     <Link
                     target="_blank" 
                     href={'https://wa.me/5511974276250/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Quero+Solicitar+um+Or%C3%A7amento+Gratuito.'}
