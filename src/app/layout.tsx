@@ -22,7 +22,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/logo/logopic.png" sizes="any" />
       </head>
-      <body className='min-h-screen py-4 bg-gray-600'>
+      <body className='min-h-screen py-4 bg-gray-600 overflow-x-hidden'>
         <NavBar/>
         <NavBarMobile/>
         <main>
