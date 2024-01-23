@@ -20,7 +20,7 @@ export const NavBarMobile = () => {
 
                     case scrollY === 0:
                     navBar.style.position = "absolute";
-                    navBar.style.right = "40%";
+                    navBar.style.right = "35%";
                     navBar.style.top = "20px";
                     navBar.style.color = "black";
                     break;
@@ -83,7 +83,7 @@ export const NavBarMobile = () => {
     <section 
     id="navBarMobile"
     onClick={setNav}
-    className="md:hidden flex-col items-center z-50 absolute right-[40%] top-5  w-fit py-2 backdrop-blur-sm bg-color-header-footer rounded-3xl shadow-md text-black text-xl font-mono font-bold hover:cursor-pointer">
+    className="md:hidden flex-col items-center z-50 absolute right-[35%] top-5  w-fit py-2 backdrop-blur-sm bg-color-header-footer rounded-3xl shadow-md text-black text-xl font-mono font-bold hover:cursor-pointer">
         <div className="flex items-center">
             <div className="ml-2 animate-pulse ">
                 <IoIosArrowDown style={{display:navArrowDown, fontSize:"1.5em"}}/>
