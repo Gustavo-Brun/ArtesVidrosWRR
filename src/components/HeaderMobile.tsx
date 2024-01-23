@@ -30,7 +30,7 @@ export const HeaderMobile = () => {
 
                     <Link 
                     href="tel:+5511980977240"
-                    className="space-y-2 active:text-green-600 "
+                    className="space-y-2 active:text-green-600 mb-4"
                     >
                         <p className="text-lg my-2">
                             Agende seu Orçamento Gratuito:
