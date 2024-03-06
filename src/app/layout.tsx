@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { NavBar } from '@/components/NavBar'
 import { NavBarMobile } from '@/components/NavBarMobile'
@@ -23,15 +24,16 @@ export default function RootLayout({
         <link rel="icon" href="/logo/logopic.png" sizes="any" />
       </head>
       <body className='min-h-screen py-4 bg-gray-600'>
-        <NavBar/>
-        <NavBarMobile/>
         <main>
+          <NavBar />
+          <NavBarMobile />
           {children}
+          <Whatsapp />
+          <Footer />
+          <FooterMobile />
         </main>
-        <Whatsapp/>
-        <Footer/>
-        <FooterMobile/>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
