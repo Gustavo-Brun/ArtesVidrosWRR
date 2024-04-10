@@ -5,10 +5,10 @@ import React from 'react';
 interface PdfProps {
   userData: {
     cliente: string;
-        contato: number | string;
-        serviços: { serviço: string; valor: number }[]; 
-        total:number ;
-        observações: string;
+    contato: number | string;
+    serviços: { serviço: string; valor: number }[];
+    total: number;
+    observações: string;
   };
   generatePDF: () => void;
   contentRef: React.RefObject<HTMLDivElement>;
@@ -16,7 +16,7 @@ interface PdfProps {
 
 export const Pdf: React.FC<PdfProps> = ({ userData, generatePDF, contentRef }) => {
 
-  const primeiroNome = (nome:string) => {
+  const primeiroNome = (nome: string) => {
     return (nome.split(" ")[0] || null);
   }
 
@@ -43,7 +43,6 @@ export const Pdf: React.FC<PdfProps> = ({ userData, generatePDF, contentRef }) =
 
           <div>
             <h2 className='text-xl font-medium mb-4'>Contato</h2>
-            <p>(11) 97427-6250 </p>
             <p>(11) 98097-7240</p>
             <p>artesvidroswrr@gmail.com</p>
           </div>
@@ -69,12 +68,12 @@ export const Pdf: React.FC<PdfProps> = ({ userData, generatePDF, contentRef }) =
             </thead>
 
             <tbody>
-            {userData.serviços.map((serviço, index) => (
-              <tr key={index}>
-                <td className='p-2 border border-black'>{serviço.serviço}</td>
-                <td className='p-2 border border-black'>R${serviço.valor},00</td>
-              </tr>
-            ))}
+              {userData.serviços.map((serviço, index) => (
+                <tr key={index}>
+                  <td className='p-2 border border-black'>{serviço.serviço}</td>
+                  <td className='p-2 border border-black'>R${serviço.valor},00</td>
+                </tr>
+              ))}
             </tbody>
           </table>
 
