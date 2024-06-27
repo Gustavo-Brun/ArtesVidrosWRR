@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form"
 export const LoginForm = () => {
 
     interface FormProps {
+        name: string;
         password: string;
     }
 
@@ -20,11 +21,26 @@ export const LoginForm = () => {
     }
 
     return (
-        <section className=" lg:border-2 lg:p-20 p-10 rounded-xl border-black shadow-2xl bg-white ">
+        <section className="p-10 rounded-xl shadow-2xl bg-white ">
 
             <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col gap-4 w-full max-w-xs font-medium my-2 ">
+
+                <div className="flex flex-col gap-1">
+                    <select
+                        defaultValue={"default"}
+                        {...register("name", { required: true })}
+                        className={`border shadow-sm rounded h-22 p-3 font-normal ${errors?.name ? 'border-red-600 ' : 'border-black'}`}
+                    >
+                        <option value="default" disabled>
+                            Quem está acessando?
+                        </option>
+                        <option value="carlos">Carlos</option>
+                        <option value="gustavo">Gustavo</option>
+                    </select>
+                    {errors?.name?.type === 'required' && <p className="text-sm text-red-700">Selecione uma opção.</p>}
+                </div>
 
                 <div className="flex flex-col gap-1">
                     <label htmlFor="paragraph_text">Senha</label>
