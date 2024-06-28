@@ -2,22 +2,22 @@
 
 import { useForm } from "react-hook-form"
 
+import { onSubmitFx } from "@/functions/onSubmitFx";
+
+export type FormProps = {
+    name: string;
+    password: string;
+}
+
 export const LoginForm = () => {
 
-    interface FormProps {
-        name: string;
-        password: string;
-    }
 
     const { register, handleSubmit, formState: { errors } } = useForm<FormProps>()
 
-    const onSubmit = (data: FormProps) => {
+    const onSubmit = async (data: FormProps) => {
 
-        try {
-            console.log(data)
-        } catch (error) {
+        await onSubmitFx(data)
 
-        }
     }
 
     return (
@@ -30,7 +30,7 @@ export const LoginForm = () => {
                 <div className="flex flex-col gap-1">
                     <select
                         defaultValue={"default"}
-                        {...register("name", { required: true })}
+                        {...register("name", { required: true, validate: (value) => value !== "default" })}
                         className={`border shadow-sm rounded h-22 p-3 font-normal ${errors?.name ? 'border-red-600 ' : 'border-black'}`}
                     >
                         <option value="default" disabled>
@@ -40,6 +40,7 @@ export const LoginForm = () => {
                         <option value="gustavo">Gustavo</option>
                     </select>
                     {errors?.name?.type === 'required' && <p className="text-sm text-red-700">Selecione uma opção.</p>}
+                    {errors?.name?.type === 'validate' && <p className="text-sm text-red-700">Selecione uma opção.</p>}
                 </div>
 
                 <div className="flex flex-col gap-1">
