@@ -1,40 +1,30 @@
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { NavBar } from '@/components/NavBar'
-import { NavBarMobile } from '@/components/NavBarMobile'
-import './globals.css'
 import type { Metadata } from 'next'
-import { Footer } from '@/components/Footer'
-import { FooterMobile } from '@/components/FooterMobile'
-import { Whatsapp } from '@/components/Whatsapp'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Artes Vidros W.R.R',
-  description: 'Vidraçaria Profissional em São Paulo',
+    title: 'Artes Vidros W.R.R',
+    description: 'Vidraçaria Profissional em São Paulo',
 }
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode
 }) {
-  return (
-    <html lang="en" className='scroll-smooth scroll-p-4'>
-      <head>
-        <link rel="icon" href="/logo/logopic.png" sizes="any" />
-      </head>
-      <body className='min-h-screen py-4 bg-gray-600'>
-        <main>
-          <NavBar />
-          <NavBarMobile />
-          {children}
-          <Whatsapp />
-          <Footer />
-          <FooterMobile />
-        </main>
-        <SpeedInsights />
-        <Analytics />
-      </body>
-    </html>
-  )
+    return (
+        <html lang="pt_BR" className='scroll-smooth scroll-p-4'>
+            <head>
+                <link rel="icon" href="/logo/logopic.png" sizes="any" />
+            </head>
+            <body className='min-h-screen py-4 bg-gray-600'>
+                <main>
+                    {children}
+                </main>
+                <SpeedInsights />
+                <Analytics />
+            </body>
+        </html>
+    )
 }

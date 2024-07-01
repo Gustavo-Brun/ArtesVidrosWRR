@@ -1,8 +1,16 @@
+import { auth } from "@/services/auth"
 
+import { redirect } from 'next/navigation'
 
 import { LoginForm } from "@/components/LoginForm";
 
-export default function FormPage() {
+export default async function FormPage() {
+
+    const session = await auth()
+
+    if (session) {
+        redirect('/app')
+    }
 
     return (
         <main className="min-h-[80vh] flex items-center justify-center">
