@@ -2,7 +2,7 @@ import { auth } from "@/services/auth"
 
 import { redirect } from 'next/navigation'
 
-import { LoginForm } from "@/components/LoginForm";
+import { LoginForm } from "@/components/AuthPages/LoginForm"
 
 export default async function FormPage() {
 

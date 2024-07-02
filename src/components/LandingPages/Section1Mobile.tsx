@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
-import { Spacer } from './Spacer';
+import { Spacer } from '../@utils/Spacer';
 
 export function Section1Mobile() {
 

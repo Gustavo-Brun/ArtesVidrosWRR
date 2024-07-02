@@ -1,6 +1,6 @@
 import { auth } from '@/services/auth'
 
-import { Unauthorized } from '@/components/Unauthorized';
+import { Unauthorized } from '@/components/AuthPages/Unauthorized';
 
 export default async function RootLayout({
     children,

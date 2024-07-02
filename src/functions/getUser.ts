@@ -1,7 +1,4 @@
-const authorizedUsers = [
-  { name: "carlos", password: process.env.CARLOS_PASSWORD },
-  { name: "gustavo", password: process.env.GUSTAVO_PASSWORD },
-];
+import { authorizedUsers } from "@/data/authorizedUsers";
 
 export type UserProps = {
   name: string;

@@ -1,4 +1,4 @@
-import { DataRequest } from "@/components/DataRequest";
+import { DataRequest } from "@/components/AppPages/PDF/DataRequest";
 
 export default async function HomePdf() {
   return (
