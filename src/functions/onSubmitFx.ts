@@ -1,6 +1,6 @@
 "use server";
 
-import { FormProps } from "@/components/LoginForm";
+import { FormProps } from "@/components/AuthPages/LoginForm";
 
 import { signIn } from "@/services/auth";
 
