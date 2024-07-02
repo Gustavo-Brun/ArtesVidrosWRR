@@ -12,7 +12,10 @@
     "@emailjs/browser": "^4.3.3",
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.12",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "html2pdf.js": "^0.10.1",
+    "lucide-react": "^0.400.0",
     "next": "^14.1.1",
     "next-auth": "^5.0.0-beta.19",
     "react": "latest",
@@ -20,7 +23,9 @@
     "react-hook-form": "^7.52.0",
     "react-icons": "^4.12.0",
     "sonner": "^1.5.0",
-    "swiper": "^11.1.4"
+    "swiper": "^11.1.4",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "latest",
