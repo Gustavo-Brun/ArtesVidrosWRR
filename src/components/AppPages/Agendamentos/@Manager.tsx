@@ -2,6 +2,8 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+import { Tab_Create } from "./Tab_Create";
+
 export const Manager = () => {
     return (
         <section className="w-fit mx-auto p-2 border-2 border-black rounded-xl shadow-2xl bg-white">
@@ -32,7 +34,7 @@ export const Manager = () => {
                         {/*Tab_Display*/}
                     </TabsContent>
                     <TabsContent value="create">
-                        {/*Tab_Create*/}
+                        <Tab_Create />
                     </TabsContent>
                 </section>
             </Tabs>
