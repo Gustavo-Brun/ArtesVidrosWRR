@@ -6,6 +6,7 @@ import { useForm, type SubmitHandler, Controller } from "react-hook-form";
 import { format } from "date-fns"
 import { ptBR } from "date-fns/locale";
 import { Calendar as CalendarIcon } from "lucide-react"
+import { Toaster, toast } from "sonner";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button"
@@ -52,11 +53,15 @@ export const Tab_Create = (): React.JSX.Element => {
             fetchSchedule.createSchedule(formattedData)
                 .then(
                     () => {
-                        alert("Agendamento criado com sucesso!")
+                        toast.success("Agendamento criado com sucesso!")
+
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 5000);
                     }
                 )
         } catch {
-            alert("Ops! Houve um problema ao tentar salvar o agendamento. Por favor, tente novamente.")
+            toast.error("Ops! Houve um problema ao tentar salvar o agendamento. Por favor, tente novamente.")
         }
     };
 
@@ -66,6 +71,7 @@ export const Tab_Create = (): React.JSX.Element => {
             onSubmit={handleSubmit(onSubmitFx)}
             className="flex flex-col bg-white rounded-2xl p-6 gap-6 lg:p-8"
         >
+            <Toaster richColors />
             <div className="flex gap-4 justify-center text-sm lg:text-base">
                 <div className="flex py-2 gap-1 items-center">
                     <input
