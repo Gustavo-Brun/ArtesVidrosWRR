@@ -1,5 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+import { Tab_Display } from "./Tab_Display";
 import { Tab_Create } from "./Tab_Create";
 
 export const Manager = () => {
@@ -29,7 +30,7 @@ export const Manager = () => {
 
                 <section className="flex flex-col gap-8">
                     <TabsContent value="display">
-                        {/*Tab_Display*/}
+                        <Tab_Display />
                     </TabsContent>
                     <TabsContent value="create">
                         <Tab_Create />
