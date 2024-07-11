@@ -16,6 +16,8 @@ import {
     PopoverTrigger,
 } from "@/components/ui/popover"
 
+import fetchSchedule from "@/functions/fetchSchedule";
+
 type CreateFormProps = {
     category: "budget" | "execution";
     name: string;
@@ -37,7 +39,25 @@ export const Tab_Create = (): React.JSX.Element => {
     } = useForm<CreateFormProps>();
 
     const onSubmitFx: SubmitHandler<CreateFormProps> = (data) => {
-        console.log(data);
+
+        const formattedData = {
+            category: data.category,
+            name: data.name,
+            adress: data.adress,
+            contact: data.contact,
+            date: format(new Date(`${data.date.day}`), "dd/MM/yyyy", { locale: ptBR }) + " - " + data.date.time,
+        }
+
+        try {
+            fetchSchedule.createSchedule(formattedData)
+                .then(
+                    () => {
+                        alert("Agendamento criado com sucesso!")
+                    }
+                )
+        } catch {
+            alert("Ops! Houve um problema ao tentar salvar o agendamento. Por favor, tente novamente.")
+        }
     };
 
 
