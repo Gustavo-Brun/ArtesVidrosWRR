@@ -1,4 +1,6 @@
-import React from "react";
+'use client'
+
+import React, { useEffect, useState } from "react";
 
 import {
     Table,
@@ -12,9 +14,19 @@ import {
 
 import fetchSchedule from "@/functions/fetchSchedule";
 
-export const Tab_Display = async () => {
+export const Tab_Display = () => {
 
-    const data = await fetchSchedule.getSchedule()
+    const [schedule, setSchedule] = useState([]);
+
+    const fetchData = async () => {
+        return await fetchSchedule.getSchedule();
+    };
+
+    useEffect(() => {
+        fetchData().then(data => {
+            setSchedule(data);
+        });
+    }, []);
 
     type dataProps = {
         id: number;
@@ -41,8 +53,7 @@ export const Tab_Display = async () => {
                 </TableHeader>
                 <TableBody>
                     {
-                        data !== null &&
-                        data.map((item: dataProps) => {
+                        schedule.map((item: dataProps) => {
                             return (
                                 <TableRow key={item.id}>
                                     <TableCell>{item.category}</TableCell>
