@@ -22,7 +22,14 @@ async function createSchedule(schedule: object) {
   });
 }
 
+async function deleteSchedule(id: number) {
+  await fetch(`http://localhost:3333/delete/${id}`, {
+    method: "DELETE",
+  });
+}
+
 export default {
   getSchedule,
   createSchedule,
+  deleteSchedule,
 };
