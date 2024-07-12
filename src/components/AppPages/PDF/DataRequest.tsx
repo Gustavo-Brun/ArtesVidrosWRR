@@ -73,7 +73,7 @@ export const DataRequest = () => {
 
   return (
     <section>
-      <div className={`grid grid-cols-1 gap-2 md:mx-auto mx-2 md:my-14 p-5 border-2 border-black rounded-xl shadow-2xl bg-white md:w-2/4 mt-36 text-xl `}>
+      <div className={`grid grid-cols-1 gap-2 md:mx-auto mx-2 md:my-14 p-5 border-2 border-black rounded-xl shadow-2xl bg-white md:w-2/4 mt-10 text-xl `}>
 
         <label htmlFor="clienteInput">Cliente</label>
         <input type="text" id="clienteInput" placeholder="Insira o nome do cliente." name="cliente" onChange={userDataHandler} />

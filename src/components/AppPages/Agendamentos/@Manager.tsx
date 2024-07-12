@@ -5,7 +5,7 @@ import { Tab_Create } from "./Tab_Create";
 
 export const Manager = () => {
     return (
-        <section className="w-fit mx-auto p-2 border-2 border-black rounded-xl shadow-2xl bg-white">
+        <section className="w-fit mx-auto mt-10 p-2 border-2 border-black rounded-xl shadow-2xl bg-white">
             <Tabs
                 id="tabsId"
                 defaultValue="display"
