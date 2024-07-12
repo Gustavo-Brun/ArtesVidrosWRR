@@ -1,5 +1,5 @@
 async function getSchedule() {
-  const response = await fetch("http://localhost:3333/list", {
+  const response = await fetch("https://artesvidroswrr-api.onrender.com/list", {
     method: "GET",
   });
 
@@ -13,7 +13,7 @@ async function getSchedule() {
 }
 
 async function createSchedule(schedule: object) {
-  await fetch("http://localhost:3333/create", {
+  await fetch("https://artesvidroswrr-api.onrender.com/create", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -23,7 +23,7 @@ async function createSchedule(schedule: object) {
 }
 
 async function deleteSchedule(id: number) {
-  await fetch(`http://localhost:3333/delete/${id}`, {
+  await fetch(`https://artesvidroswrr-api.onrender.com/delete/${id}`, {
     method: "DELETE",
   });
 }
