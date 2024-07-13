@@ -39,7 +39,7 @@ export const DataRequest = () => {
     const valorInput = document.getElementById('valorInput') as HTMLInputElement
     const valorServiço = parseFloat(valorInput.value);
 
-    if (novoServiço.trim() !== '' && valorServiço !== 0) {
+    if (novoServiço.trim() !== '' && valorServiço > 1) {
       setUserData((prevData) => {
         const novoTotal = prevData.total + (valorServiço);
 
@@ -53,7 +53,7 @@ export const DataRequest = () => {
       serviçoInput.value = '';
       valorInput.value = '';
     } else {
-      window.alert('Os campos: Serviço/Produto e Valor devem ser preenchidos.')
+      window.alert('Os campos: "Serviço/Produto" e "Valor" devem ser preenchidos.')
     }
   };
 
