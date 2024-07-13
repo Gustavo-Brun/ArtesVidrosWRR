@@ -7,6 +7,7 @@ export const DataRequest = () => {
   interface UserDataProps {
 
     cliente: string;
+    endereço?: string;
     contato: number | string;
     serviços: { serviço: string; valor: number }[];
     total: number;
@@ -15,6 +16,7 @@ export const DataRequest = () => {
 
   const [userData, setUserData] = useState<UserDataProps>({
     cliente: ' ',
+    endereço: ' ',
     contato: ' ',
     serviços: [],
     total: 0,
@@ -61,7 +63,6 @@ export const DataRequest = () => {
     const content = contentRef.current;
 
     if (content) {
-      // Importação html2pdf apenas no lado do cliente
       const html2pdf = (await import('html2pdf.js')).default;
       const options = {
         filename: `Pedido ${userData.cliente}.pdf`,
@@ -78,6 +79,12 @@ export const DataRequest = () => {
         <label htmlFor="clienteInput">Cliente</label>
         <input type="text" id="clienteInput" placeholder="Insira o nome do cliente." name="cliente" onChange={userDataHandler} />
 
+        <label htmlFor="endereçoInput">Endereço (Opcional)</label>
+        <input type="text" id="endereçoInput" placeholder="Insira o nome do cliente." name="endereço" onChange={userDataHandler} />
+
+        <label htmlFor="cnpjInput">CPF/CNPJ (Opcional)</label>
+        <input type="text" id="cnpjInput" placeholder="Insira o nome do cliente." name="cnpj" onChange={userDataHandler} />
+
         <label htmlFor="contatoInput">Contato</label>
         <input type="tel" id="contatoInput" placeholder="Telefone." name="contato" onChange={userDataHandler} />
 
@@ -93,7 +100,7 @@ export const DataRequest = () => {
 
       </div>
 
-      <div className={`grid grid-cols-1 gap-2 md:mx-auto mx-2 my-14 p-5 border-2 border-black rounded-xl shadow-2xl bg-white md:w-4/5 `}>
+      <div className="md:mx-auto mx-2 my-14 border-2 border-black rounded-xl shadow-2xl bg-white md:w-4/5 ">
         <Pdf userData={userData} generatePDF={generatePDF} contentRef={contentRef} />
       </div>
 
