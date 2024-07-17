@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+
 import { servicesData } from "@/data/servicesData";
 
 export const Cards = () => {
@@ -16,9 +18,12 @@ export const Cards = () => {
             <Link key={url} href={`/servicos/${url}`} className={` grid justify-items-center m-5 my-10 p-5 border-b-4 ${borderColor} rounded-xl shadow-2xl bg-white	 cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110 active:scale-90`} >
 
               <div className="my-2">
-                <img className="w-28 "
+                <Image
                   src={image}
-                  alt={`ícone do item ${title}.`} />
+                  alt={`ícone do item ${title}.`} 
+                  height={112}  
+                  width={112}
+                />
               </div>
 
               <h3 className="my-2 text-2xl font-bold"> {title} </h3>
