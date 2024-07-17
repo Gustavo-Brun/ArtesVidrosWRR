@@ -4,6 +4,7 @@ import React from 'react';
 
 interface PdfProps {
   userData: {
+    title: string;
     cliente: string;
     endereço?: string;
     cnpj?: string;
@@ -22,7 +23,6 @@ export const Pdf: React.FC<PdfProps> = ({ userData, generatePDF, contentRef }) =
     return (nome.split(" ")[0] || null);
   }
 
-
   return (
     <section>
 
@@ -31,7 +31,7 @@ export const Pdf: React.FC<PdfProps> = ({ userData, generatePDF, contentRef }) =
         <div className="absolute opacity-30 bg-contain bg-no-repeat bg-center h-full w-full -z-10" style={{ backgroundImage: 'url("/logo/Artes-Vidros-nBg.png")' }}></div>
 
         <section className='my-8'>
-          <h1 className='text-6xl font-bold mb-4'>Pedido - {primeiroNome(userData.cliente)}</h1>
+          <h1 className='text-6xl font-bold mb-4'>{userData.title} - {primeiroNome(userData.cliente)}</h1>
           <p className='text-lg text italic'>Emissão: <span>{new Date().toLocaleDateString('pt-BR')}</span></p>
         </section>
 

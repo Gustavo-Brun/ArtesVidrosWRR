@@ -5,7 +5,7 @@ import { ChangeEvent, useState, useRef } from "react"
 export const DataRequest = () => {
 
   interface UserDataProps {
-
+    title: string;
     cliente: string;
     endereço?: string;
     contato: number | string;
@@ -15,6 +15,7 @@ export const DataRequest = () => {
   }
 
   const [userData, setUserData] = useState<UserDataProps>({
+    title: 'Orçamento',
     cliente: ' ',
     endereço: ' ',
     contato: ' ',
@@ -75,6 +76,32 @@ export const DataRequest = () => {
   return (
     <section>
       <div className={`grid grid-cols-1 gap-2 md:mx-auto mx-2 md:my-14 p-5 border-2 border-black rounded-xl shadow-2xl bg-white md:w-2/4 mt-10 text-xl `}>
+
+        <div className="flex gap-4">
+          <div className="flex py-2 gap-1 items-center">
+            <input
+              className="accent-color-secundary w-5 h-5"
+              type="radio"
+              id="budget"
+              name="title"
+              value="Orçamento"
+              defaultChecked
+              onChange={userDataHandler}
+            />
+            <label htmlFor="budget">Orçamento</label>
+          </div>
+          <div className="flex py-2 gap-1 items-center">
+            <input
+              className="accent-color-secundary w-5 h-5"
+              type="radio"
+              id="order"
+              name="title"
+              value="Pedido"
+              onChange={userDataHandler}
+            />
+            <label htmlFor="order">Pedido</label>
+          </div>
+        </div>
 
         <label htmlFor="clienteInput">Cliente</label>
         <input type="text" id="clienteInput" placeholder="Insira o nome do cliente." name="cliente" onChange={userDataHandler} />
