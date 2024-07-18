@@ -34,7 +34,7 @@ export function Section1() {
   };
 
   return (
-    <section className="hidden lg:flex mb-10 -mt-24 items-center px-20  bg-white ">
+    <section className="hidden lg:flex mb-10 -mt-20 items-center px-20  bg-white ">
 
       <div className='w-1/2 grid gap-12 mr-16 justify-items-start '>
         <h2 className="font-bold text-5xl">

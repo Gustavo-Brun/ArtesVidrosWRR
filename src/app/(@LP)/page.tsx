@@ -1,6 +1,5 @@
 import { Cards } from "@/components/LandingPages/Cards";
 import { Header } from "@/components/LandingPages/Header";
-import { HeaderMobile } from "@/components/LandingPages/HeaderMobile";
 import { Sash } from "@/components/@utils/Sash";
 import { Section1 } from "@/components/LandingPages/Section1";
 import { Section1Mobile } from "@/components/LandingPages/Section1Mobile";
@@ -13,7 +12,6 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <HeaderMobile />
       <Section1 />
       <Section1Mobile />
       <Sash text="Nossos Serviços" />

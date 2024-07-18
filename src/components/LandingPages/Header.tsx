@@ -5,8 +5,8 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export const Header = () => {
     return (
-        <header id="inicio" className="md:flex hidden h-screen bg-gray-600 pt-14 pl-20">
-            <div className=" text-white h-fit xl:w-2/5 grid grid-cols-1 gap-10 font-font-heebo z-10 ">
+        <header id="inicio" className="flex min-h-screen px-4 pt-36 lg:pt-14 lg:pl-20">
+            <section className=" text-white text-center lg:text-start h-fit xl:w-2/5 flex flex-col gap-10 font-font-heebo z-10">
                 <h1 className="tracking-widest">Vidraçaria Profissional no Jardim Selma - Zona Sul de São Paulo</h1>
                 <div>
                     <h2 className="text-6xl mb-4">Vidraçaria Artes Vidros W.R.R</h2>
@@ -33,14 +33,17 @@ export const Header = () => {
                             <p className="text-lg my-2">
                                 Agende seu Orçamento Gratuito:
                             </p>
-                            <p className="text-4xl">
+                            <p className="text-2xl lg:text-4xl">
                                 (11) 98097-7240
+                            </p>
+                            <p className="text-2xl lg:text-4xl">
+                                (11) 97835-1205
                             </p>
                         </Link>
                     </div>
 
                 </div>
-            </div>
+            </section>
             <Image
                 src={'/img/header-img.png'}
                 alt="Header Image"
