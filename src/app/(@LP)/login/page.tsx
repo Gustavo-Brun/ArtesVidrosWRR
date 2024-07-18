@@ -13,7 +13,7 @@ export default async function FormPage() {
     }
 
     return (
-        <main className="min-h-[80vh] flex items-center justify-center">
+        <main className="min-h-[80vh] pt-4 lg:pt-0 flex items-center justify-center">
 
             <section className="w-fit h-full lg:border-2 lg:p-20 p-10 rounded-xl border-black shadow-2xl space-y-10 bg-white ">
                 <div>
