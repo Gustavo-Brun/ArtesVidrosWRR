@@ -1,11 +1,11 @@
 'use client'
 
 import { useForm } from "react-hook-form"
+import { Toaster, toast } from "sonner";
 
 import { onSubmitFx } from "@/functions/onSubmitFx";
 
 export type FormProps = {
-    name: string;
     password: string;
 }
 
@@ -16,32 +16,21 @@ export const LoginForm = () => {
 
     const onSubmit = async (data: FormProps) => {
 
-        await onSubmitFx(data)
+        try {
+            await onSubmitFx(data)
+        } catch {
+            toast.error('Senha incorreta, tente novamente.')
+        }
 
     }
 
     return (
         <section className="p-10 rounded-xl shadow-2xl bg-white ">
+            <Toaster richColors />
 
             <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col gap-4 w-full max-w-xs font-medium my-2 ">
-
-                <div className="flex flex-col gap-1">
-                    <select
-                        defaultValue={"default"}
-                        {...register("name", { required: true, validate: (value) => value !== "default" })}
-                        className={`border shadow-sm rounded h-22 p-3 font-normal ${errors?.name ? 'border-red-600 ' : 'border-black'}`}
-                    >
-                        <option value="default" disabled>
-                            Quem está acessando?
-                        </option>
-                        <option value="carlos">Carlos</option>
-                        <option value="gustavo">Gustavo</option>
-                    </select>
-                    {errors?.name?.type === 'required' && <p className="text-sm text-red-700">Selecione uma opção.</p>}
-                    {errors?.name?.type === 'validate' && <p className="text-sm text-red-700">Selecione uma opção.</p>}
-                </div>
 
                 <div className="flex flex-col gap-1">
                     <label htmlFor="paragraph_text">Senha</label>

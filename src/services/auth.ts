@@ -8,7 +8,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Credentials({
       credentials: {
-        name: {},
         password: {},
       },
       authorize: (credentials) => {
@@ -17,7 +16,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         user = getUser(credentials as UserProps);
 
         if (!user) {
-          throw new Error("User not found.");
+          throw new Error("User not authorized.");
         }
 
         return user;
