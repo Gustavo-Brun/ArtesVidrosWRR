@@ -1,7 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
-import { FaWhatsapp } from "react-icons/fa";
 
+import { FaWhatsapp } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 export const Header = () => {
     return (
@@ -15,16 +16,27 @@ export const Header = () => {
                 <div
                     className="before:border-t-2 before:block before:mb-10 before:border-gray-500"
                 >
-                    <div className="flex text-center items-center space-x-6 ">
-                        <Link
-                            target="_blank"
-                            href={'https://wa.me/5511980977240/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Quero+Solicitar+um+Or%C3%A7amento+Gratuito.'}
-                            className="ml-6 animate-pulse active:text-color-gray"
-                        >
-                            <FaWhatsapp
-                                style={{ background: 'linear-gradient(45deg, #25D366, #128C7E)', borderRadius: '50%', fontSize: '70px', padding: '10px' }}
-                            />
-                        </Link>
+                    <div className="flex text-center items-center space-x-6">
+                        <div className="flex flex-col gap-4">
+                            <Link
+                                target="_blank"
+                                href={'https://wa.me/5511980977240/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Quero+Solicitar+um+Or%C3%A7amento+Gratuito.'}
+                                className="ml-6 animate-pulse active:text-color-gray"
+                            >
+                                <FaWhatsapp
+                                    style={{ background: 'linear-gradient(45deg, #25D366, #128C7E)', borderRadius: '50%', fontSize: '50px', padding: '2px' }}
+                                />
+                            </Link>
+                            <Link
+                                href={'https://www.instagram.com/artesvidroswrr/'}
+                                target="blank"
+                                className="ml-6 animate-pulse active:text-color-gray">
+                                <FaInstagram
+                                    style={{ color: 'white', fontSize: '50px', background: 'linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45)', borderRadius: '30%', padding: '2px' }}
+                                />
+
+                            </Link>
+                        </div>
 
                         <Link
                             href="tel:+5511980977240"
