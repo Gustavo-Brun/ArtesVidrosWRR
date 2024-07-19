@@ -1,7 +1,11 @@
 'use client'
 
 import Link from "next/link"
+
 import { useEffect, useState } from "react";
+
+import { sendGAEvent } from '@next/third-parties/google'
+
 import { FaWhatsapp } from "react-icons/fa"
 
 export const Whatsapp = () => {
@@ -9,17 +13,18 @@ export const Whatsapp = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Define um timeout para mudar o estado após 2000 milissegundos (2 segundos)
     const timeoutId = setTimeout(() => {
       setIsVisible(true);
     }, 5000);
 
-    // Limpa o timeout se o componente for desmontado antes de o timeout ser atingido
     return () => clearTimeout(timeoutId);
-  }, []); // O array vazio garante que este efeito seja executado apenas uma vez, equivalente a componentDidMount
+  }, []);
 
   return (
-    <div className="fixed bottom-2 right-4 md:bottom-14 md:right-14 text-white animate-bounce">
+    <div 
+    onClick={() => sendGAEvent({ event: 'Global WhatsApp Button Clicked', value: 'xyz' })}
+    className="fixed bottom-2 right-4 md:bottom-14 md:right-14 text-white animate-bounce">
+      
       {isVisible &&
 
         <Link
