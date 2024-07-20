@@ -21,6 +21,7 @@ export const Header = () => {
                             <Link
                                 target="_blank"
                                 href={'https://wa.me/5511978351205/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Quero+Solicitar+um+Or%C3%A7amento+Gratuito.'}
+                                aria-label="WhatsApp da Vidraçaria Artes Vidros W.R.R"
                                 className="ml-6 animate-pulse active:text-color-gray"
                             >
                                 <FaWhatsapp
@@ -30,11 +31,12 @@ export const Header = () => {
                             <Link
                                 href={'https://www.instagram.com/artesvidroswrr/'}
                                 target="blank"
-                                className="ml-6 animate-pulse active:text-color-gray">
+                                aria-label="Instagram da Vidraçaria Artes Vidros W.R.R"
+                                className="ml-6 animate-pulse active:text-color-gray"
+                            >
                                 <FaInstagram
                                     style={{ color: 'white', fontSize: '50px', background: 'linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45)', borderRadius: '30%', padding: '2px' }}
                                 />
-
                             </Link>
                         </div>
 

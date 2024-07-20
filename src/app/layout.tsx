@@ -17,7 +17,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="pt_BR" className='scroll-smooth scroll-p-4'>
+        <html lang="pt" className='scroll-smooth scroll-p-4'>
             <head>
                 <link rel="icon" href="/logo/logopic.png" sizes="any" />
             </head>

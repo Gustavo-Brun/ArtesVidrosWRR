@@ -17,8 +17,9 @@ export const Footer = () => {
                 <div>
                     <p className="mb-2">NOS SIGA NAS REDES SOCIAIS</p>
                     <Link
-                        href={'https://www.instagram.com/artesvidroswrr/'}
                         target="blank"
+                        href={'https://www.instagram.com/artesvidroswrr/'}
+                        aria-label="Instagram da Vidraçaria Artes Vidros W.R.R"
                     >
                         <FaInstagram style={{ color: 'white', fontSize: '30px', background: 'linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45)', borderRadius: '30%', padding: '2px' }} />
                     </Link>
