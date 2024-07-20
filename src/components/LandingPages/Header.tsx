@@ -20,7 +20,7 @@ export const Header = () => {
                         <div className="flex flex-col gap-4">
                             <Link
                                 target="_blank"
-                                href={'https://wa.me/5511980977240/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Quero+Solicitar+um+Or%C3%A7amento+Gratuito.'}
+                                href={'https://wa.me/5511978351205/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Quero+Solicitar+um+Or%C3%A7amento+Gratuito.'}
                                 className="ml-6 animate-pulse active:text-color-gray"
                             >
                                 <FaWhatsapp

@@ -48,7 +48,7 @@ export const Cards = () => {
 
           <p className="my-4  text-xl   hover:text-gray-600 transition-colors duration-300"> Não se preocupe. Criamos um serviço personalizado para você! </p>
 
-          <Link href={'https://wa.me/5511980977240/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Gostaria+de+Solicitar+um+Or%C3%A7amento+Gratuito.'}
+          <Link href={'https://wa.me/5511978351205/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Gostaria+de+Solicitar+um+Or%C3%A7amento+Gratuito.'}
             className="my-5 bg-gradient-to-r from-color-primary  to-color-secundary hover:from-color-secundary  hover:to-color-primary text-black font-bold py-2 px-6 rounded-full shadow-md transition-transform duration-1000 ease-in-out transform hover:scale-110 active:text-red-600 animate-pulse ">
             Solicitar Projeto Personalizado
           </Link>
