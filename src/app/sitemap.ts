@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { servicesData } from "@/data/servicesData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseURL = "https://artesvidroswrr.com.br";
+  const baseURL = "https://www.artesvidroswrr.com.br";
 
   const services: MetadataRoute.Sitemap = servicesData.map(({ url }) => {
     return {
