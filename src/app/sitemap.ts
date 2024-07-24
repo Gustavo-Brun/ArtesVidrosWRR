@@ -16,6 +16,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: baseURL,
       priority: 1,
     },
+    {
+      url: baseURL + "/servicos",
+      priority: 0.9,
+    },
     ...services,
   ];
 }
