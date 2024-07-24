@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/app",
     },
-    sitemap: "https://artesvidroswrr.com.br/sitemap.xml",
+    sitemap: "https://www.artesvidroswrr.com.br/sitemap.xml",
   };
 }
