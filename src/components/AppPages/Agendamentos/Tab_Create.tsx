@@ -57,7 +57,7 @@ export const Tab_Create = (): React.JSX.Element => {
 
                         setTimeout(() => {
                             window.location.reload();
-                        }, 5000);
+                        }, 3000); // 3 min
                     }
                 )
         } catch {
