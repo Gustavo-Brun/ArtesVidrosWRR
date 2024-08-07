@@ -173,9 +173,7 @@ export const Tab_Create = (): React.JSX.Element => {
                                     mode="single"
                                     selected={value as unknown as Date}
                                     onSelect={onChange}
-                                    initialFocus
                                     locale={ptBR}
-
                                 />
                             </PopoverContent>
                         </Popover>
