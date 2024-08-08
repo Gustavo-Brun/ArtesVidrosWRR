@@ -47,12 +47,12 @@ export const Pdf: React.FC<PdfProps> = ({ userData, generatePDF, contentRef }) =
 
                 <span className='text-lg text-end'>São Paulo, {date.toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
 
-                <div className="flex justify-end text-center my-4">
+                <div className="relative mt-4 mb-2 ml-auto w-[367px] h-[85px]">
                     <Image
                         src={'/img/signature.png'}
                         alt='Signature'
-                        height={500}
-                        width={500} />
+                        fill
+                    />
                 </div>
 
 
