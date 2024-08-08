@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import Image from 'next/image';
+
 var extenso = require('extenso')
 
 interface PdfProps {
@@ -45,8 +47,12 @@ export const Pdf: React.FC<PdfProps> = ({ userData, generatePDF, contentRef }) =
 
                 <span className='text-lg text-end'>São Paulo, {date.toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
 
-                <div className="flex justify-end text-center mr-10 my-10 mt-24">
-                    <h3 className="before:block before:border before:border-black w-1/2 ml-0">Vidraçaria Artes Vidros W.R.R</h3>
+                <div className="flex justify-end text-center my-4">
+                    <Image
+                        src={'/img/signature.png'}
+                        alt='Signature'
+                        height={500}
+                        width={500} />
                 </div>
 
 
