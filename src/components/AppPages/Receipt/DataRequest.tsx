@@ -36,6 +36,7 @@ export const DataRequest = () => {
             const html2pdf = (await import('html2pdf.js')).default;
             const options = {
                 filename: `Recibo - ${userData.name}.pdf`,
+                jsPDF: { orientation: 'landscape' }
             };
 
             html2pdf(content, options);
