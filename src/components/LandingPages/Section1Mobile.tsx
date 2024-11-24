@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import { Spacer } from '../@utils/Spacer';
+import Image from 'next/image';
 
 export function Section1Mobile() {
 
@@ -72,7 +73,12 @@ export function Section1Mobile() {
         </div>
       </div>
 
-      <Spacer style={'bg-[url(/img/divider.png)] bg-center bg-contain bg-no-repeat h-20 w-full -mb-8'} />
+      <Image 
+        src={'/img/divider.webp'}
+        alt='divider image'
+        width={300}
+        height={300}
+      />
 
     </section>
   )
