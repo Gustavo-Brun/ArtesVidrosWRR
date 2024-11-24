@@ -46,7 +46,7 @@ export function Section1Mobile() {
         </p>
         <Link
           target='blank'
-          href={'https://wa.me/5511978351205/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Quero+Solicitar+um+Or%C3%A7amento+Gratuito.'}
+          href={'https://wa.me/5511980977240/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Quero+Solicitar+um+Or%C3%A7amento+Gratuito.'}
           className='text-xl shadow-md text-white w-fit p-3 border-2 bg-black font-mono font-bold transition-transform duration-300 ease-in-out transform hover:scale-110 hover:text-red-600'>
           FALE CONOSCO
         </Link>

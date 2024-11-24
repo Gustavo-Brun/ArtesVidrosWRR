@@ -29,7 +29,7 @@ export const Whatsapp = () => {
 
         <Link
           target="_blank"
-          href={'https://wa.me/5511978351205/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Gostaria+de+Solicitar+um+Or%C3%A7amento+Gratuito.'}
+          href={'https://wa.me/5511980977240/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Gostaria+de+Solicitar+um+Or%C3%A7amento+Gratuito.'}
           aria-label="WhatsApp da Vidraçaria Artes Vidros W.R.R"
           className="active:text-color-gray md:hover:text-color-gray"
         >

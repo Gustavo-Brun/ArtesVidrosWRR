@@ -28,7 +28,7 @@ export default function HomeServicoId({ params }: { params: { servicoId: string 
 
                 <Link
                     target="_blank"
-                    href={`https://wa.me/5511978351205/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Quero+Solicitar+um+Or%C3%A7amento+Gratuito+de+${servico.title}.`}
+                    href={`https://wa.me/5511980977240/?text=Ol%C3%A1+Vidra%C3%A7aria+Artes+Vidros+W.R.R.+Quero+Solicitar+um+Or%C3%A7amento+Gratuito+de+${servico.title}.`}
                     className='flex mx-auto my-3 text-2xl rounded-3xl shadow-md text-white p-3 border-2 bg-black font-mono font-bold'>Solicitar Orçamento</Link>
             </section>
 
